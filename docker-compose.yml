@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  jenkins-dsl:
+    image: tomdesinto/jenkins-dsl-ready
+    container_name: jenkins-dsl-container
+    ports:
+      - "8080:8080"
+    volumes:
+      - /Users/christal/Documents/Devops/Jenkins:/usr/share/jenkins/ref/jobs/SeedJob/workspace/
+    restart: unless-stopped
